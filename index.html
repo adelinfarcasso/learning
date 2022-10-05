@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        {"name":"stackoverflow","id":5}
+    </script> -->
+    <script>
+        let jsonData = {"name":"stackoverflow","id":"5"};
+        let func = function (json){
+            console.log(json);
+        }(jsonData);
+    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="button" class="button" value="Submit">
+    <input type="button" class="button" value="Cancel">
+    <div class="clearfix"></div>
+    <div class="textContainer">
+        <!-- <h1 class="title">Title</h1>
+        <h2 class="subtitle">Subtitle</h2> -->
+    </div>
+
+    <div class="wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

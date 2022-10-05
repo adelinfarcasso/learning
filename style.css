@@ -1,0 +1,60 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body{
+   color:red;
+}
+
+.button {
+   background-color:#ccc;
+   padding:5px;
+}
+.title, .subtitle{
+   width: 30%;
+   float:left;
+   margin:auto;
+   text-align: center;
+   vertical-align: bottom;
+   
+}
+@media all and (max-width:215px){
+   .title, .subtitle{
+      width:100%;
+   }
+}
+
+.clearfix{
+   clear: both;
+}
+
+.wrapper{
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   /* grid-auto-rows: auto; */
+   grid-template-rows: 10em;
+   /* pentru elem. care nu sunt adaugate ulterior */
+   grid-auto-rows: 10em; 
+   
+}
+
+.box:nth-child(odd){
+background-color: aliceblue;}
+.box:nth-child(even){
+   background-color: #ccc;
+   border: 1px solid black;
+}
+
+#parent{
+   position: static;
+   background-color:blue;
+}
+
+#child{
+background-color:aqua;
+   float:left;
+   height:90px;
+   width:100px;
+}
