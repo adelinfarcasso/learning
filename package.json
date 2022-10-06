@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "less": "^4.1.3"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true
+  }
+}
