@@ -4,19 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #btn {
+        margin-bottom: 1rem;
+      }
+      .range-selector {
+        display: flex;
+      }
+
+      ul {
+        background: #f4f4f4f4;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      ul > li:first-child {
+        list-style: none;
+      }
+
+      img {
+        width: 100px;
+        height: auto;
+      }
+    </style>
     <title>AJAX 3 - External API</title>
   </head>
   <body>
-    <button id="btn">Load Github Users</button>
-    <br />
     <h1>Github Users</h1>
-    <div class="range-selector" style="display: flex">
+    <br />
+    <button id="btn">Load Github Users</button>
+    <div class="range-selector">
       <input name="range" class="rangeSlider" type="range" min="1" max="30" />
       <span class="selector-value">16</span>
     </div>
     <div id="users"></div>
     <script>
       // https://api.github.com/users
+      // https://www.youtube.com/watch?v=82hnvUYY6QA&t=1675s
 
       // Selectors
       let rangeSlider = document.querySelector('.rangeSlider');
@@ -41,7 +65,7 @@
                   'beforeend',
                   `
                <ul>
-                  <li><img src="${user.avatar_url}" style='width:150px; height: auto;'/></li>
+                  <li><img src="${user.avatar_url}"/></li>
                   <li>ID: ${user.id}</li>
                   <li>Username: ${user.login}</li>
                </ul>
