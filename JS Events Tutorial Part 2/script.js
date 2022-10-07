@@ -22,13 +22,13 @@ let updateItem = function (e) {
 };
 
 updateItemByKeypress = function (e) {
-  console.log(e);
   if (e.key === 'Enter') {
     entries.forEach((span) => {
       span.innerText = span.nextElementSibling.value;
       span.nextElementSibling.classList.add('hidden');
     });
   }
+  // alt.- setez this + doc. event target
 };
 
 // Events
@@ -38,6 +38,7 @@ listElem.forEach((elem) => {
 
 inputs.forEach((input) => {
   input.addEventListener('blur', updateItem);
+  console.log(input);
 });
 
 document.addEventListener('keypress', updateItemByKeypress);

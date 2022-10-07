@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // https://www.youtube.com/watch?v=rRgD1yVwIvE&t=86s
+      // https://jsfiddle.net/bradtraversy/e5rb0x0a/
+      const companies = [
+        { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
+        { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
+        { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
+        { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
+        {
+          name: 'Company Five',
+          category: 'Technology',
+          start: 2009,
+          end: 2014,
+        },
+        { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
+        { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996 },
+        {
+          name: 'Company Eight',
+          category: 'Technology',
+          start: 2011,
+          end: 2016,
+        },
+        { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989 },
+      ];
+
+      const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+      // arr w/ 'auto' companies
+      let autoCompanies = companies.flatMap((company) =>
+        company.category === 'Auto' ? company : []
+      );
+
+      let autoCompaniesBetter = companies.filter(
+        (company) => company.category === 'Auto'
+      );
+
+      // arr w/ companies sorted by the oldest
+      let oldestCompanies = companies
+        .map((comp) => ({
+          ...comp,
+          age: comp.end - comp.start,
+        }))
+        .sort((a, b) => b.age - a.age);
+
+      let agesSorted = ages.sort((a, b) => b - a);
+      let agesSum = ages.reduce((total, age) => total + age, 0);
+    </script>
+  </head>
+  <body></body>
+</html>
