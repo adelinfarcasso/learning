@@ -1,8 +1,10 @@
+// Selectors
 let body = document.querySelector('body');
 let listElem = document.querySelectorAll('main ul li');
 let entries = document.querySelectorAll('main ul li span');
 let inputs = document.querySelectorAll('main ul li input');
 
+// Functions
 let edit = function () {
   let span = this.querySelector('span');
   let input = this.querySelector('input');
@@ -12,13 +14,24 @@ let edit = function () {
   input.setSelectionRange(0, input.value.length);
 };
 
-let updateItem = function () {
+let updateItem = function (e) {
   this.previousElementSibling.innerText = this.value;
-  this.previousElementSibling.innerHTML = this.value;
+  this.previousElementSibling.innerText = this.value;
   this.classList.add('hidden');
   this.previousElementSibling.classList.remove('hidden');
 };
 
+updateItemByKeypress = function (e) {
+  console.log(e);
+  if (e.key === 'Enter') {
+    entries.forEach((span) => {
+      span.innerText = span.nextElementSibling.value;
+      span.nextElementSibling.classList.add('hidden');
+    });
+  }
+};
+
+// Events
 listElem.forEach((elem) => {
   elem.addEventListener('click', edit);
 });
@@ -26,3 +39,5 @@ listElem.forEach((elem) => {
 inputs.forEach((input) => {
   input.addEventListener('blur', updateItem);
 });
+
+document.addEventListener('keypress', updateItemByKeypress);
