@@ -18,4 +18,4 @@ var ice_cream = {
     name: 'ice cream',
     calories: 200
 };
-state.speak(ice_cream);
+// state.speak(ice_cream);

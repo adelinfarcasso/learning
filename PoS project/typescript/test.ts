@@ -41,4 +41,4 @@ var ice_cream = {
   calories: 200,
 };
 
-state.speak(ice_cream);
+// state.speak(ice_cream);
