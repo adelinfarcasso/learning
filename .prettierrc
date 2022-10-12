@@ -1,6 +1,9 @@
 {
-  "arrowParens": "avoid",
+  "arrowParens": "always",
   "prettier.tabWidth": 4,
   "prettier.useTabs": true,
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "singleQuote": false,
+  "semi": true,
+  "bracketSpacing": true
 }

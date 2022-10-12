@@ -1,0 +1,31 @@
+<p>Property binding</p>
+<hr />
+<label for="eventInput">{{ serverName }}</label>
+<!-- <input
+  type="text"
+  name="eventInput"
+  class="form-control"
+  (input)="onUpdateServerName($event)"
+/> -->
+<input
+  type="text"
+  name="eventInput"
+  class="input-server form-control"
+  [(ngModel)]="serverName"
+  (input)="onUpdateServerName($event)"
+/>
+<hr />
+<!-- disabled != atribute, binds to HTML element property directly -->
+<button
+  class="addBtn btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add Server
+</button>
+<br />
+<br />
+<!-- <p [innerHTML]="serverCreationStatus"></p> -->
+<p *ngIf="serverCreated">
+  Server was created, server name is {{ serverName }}!
+</p>

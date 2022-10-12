@@ -1,0 +1,18 @@
+<hr />
+<p>2nd assignment</p>
+<div class="fields d-flex">
+  <input
+    type="text"
+    [(ngModel)]="username"
+    (input)="usernameLogger()"
+    class="form form-control"
+  />
+  <p>Output: {{ username }}</p>
+  <button
+    [disabled]="!username"
+    (click)="resetUsername()"
+    class="btn btn-primary"
+  >
+    Check username
+  </button>
+</div>
