@@ -11,13 +11,16 @@
 
 <div
   *ngFor="let log of logs; let i = index"
-  [ngStyle]="i >= 4 ? { color: 'white', backgroundColor: 'blue' } : {}"
+  [ngStyle]="i > 3 ? getStyle() : {}"
 >
   {{ log }}
 </div>
 
+<!-- working: i >= 4 ? { color: 'white', backgroundColor: 'blue' } : {} -->
 <!-- De intrebat de ce nu merge cu fn -->
 <!-- li -> [ngStyle]="getStyle()" -->
+
+<!-- l.e pai nu merge, getStyle pe li returna css daca logs.length > 4, moment in care pune pe toate elem. css-ul -->
 
 <!-- 1. Add A button which says 'Display Details'
 2. Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')

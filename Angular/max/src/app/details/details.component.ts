@@ -26,14 +26,23 @@ export class DetailsComponent {
   }
 
   getStyle() {
+    return {
+      'background-color': 'blue',
+      color: 'white',
+    };
+  }
+}
+
+/*
+Varianta aiurea
+
+ getStyle() {
     if (this.logs.length > 4) {
       return {
         'background-color': 'blue',
         color: 'white',
       };
-      return {};
-    }
-    console.log(this.logs, this.logs.length, this.logBackgroundColor);
-    return this.logBackgroundColor;
-  }
-}
+    } else return {};
+
+    + getStyle() neconditionat pe li
+*/
