@@ -1,0 +1,23 @@
+<div class="container">
+  <app-input-fields
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  >
+  </app-input-fields>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">
+        Change 1st elem.
+      </button>
+      <app-elements
+        *ngFor="let serverElement of serverElements"
+        [element]="serverElement"
+        [name]="serverElement.name"
+        ><button class="btn btn-danger" (click)="destroyElem()">
+          destroy elem
+        </button></app-elements
+      >
+    </div>
+  </div>
+</div>

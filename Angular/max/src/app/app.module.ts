@@ -9,6 +9,9 @@ import { SuccessComponent } from './success/success.component';
 import { FormsModule } from '@angular/forms';
 import { UsernameComponent } from './username/username.component';
 import { DetailsComponent } from './details/details.component';
+import { Databinding } from './cmp-databinding/databinding.component';
+import { InputFieldsComponent } from './cmp-databinding/input.fields/input.fields.component';
+import { ElementsComponent } from './cmp-databinding/elements/elements.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { DetailsComponent } from './details/details.component';
     SuccessComponent,
     UsernameComponent,
     DetailsComponent,
+    Databinding,
+    InputFieldsComponent,
+    ElementsComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
