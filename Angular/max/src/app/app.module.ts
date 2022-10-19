@@ -12,6 +12,10 @@ import { DetailsComponent } from './details/details.component';
 import { Databinding } from './cmp-databinding/databinding.component';
 import { InputFieldsComponent } from './cmp-databinding/input.fields/input.fields.component';
 import { ElementsComponent } from './cmp-databinding/elements/elements.component';
+import { ngForIfRecap } from './ngForIfRecap/ngForIfRecap.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { ElementsComponent } from './cmp-databinding/elements/elements.component
     Databinding,
     InputFieldsComponent,
     ElementsComponent,
+    ngForIfRecap,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
