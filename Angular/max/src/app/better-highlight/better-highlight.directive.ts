@@ -16,6 +16,8 @@ export class BetterHighlightDirective implements OnInit {
   @Input() defaultColor: string = 'transparent';
   //   @Input('alias') defaultColor: string = 'red'; pentru '[appBetterHighlight]'="'color'" pe elen. HTML
   @Input() highlightColor: string = 'blue';
+
+  // HostBinding('value') myValue; is exactly the same as [value]="myValue" - doesn't have to be mentioned on html tag
   @HostBinding('style.backgroundColor') localStyleProperty: string =
     this.defaultColor;
   constructor(private renderer: Renderer2, private element: ElementRef) {}
@@ -29,6 +31,7 @@ export class BetterHighlightDirective implements OnInit {
     //  this.localStyleProperty = this.defaultColor;
   }
 
+  //   HostListener('click') myClick(){ } is exactly the same as (click)="myClick()"
   @HostListener('mouseenter') mouseover(eventData: Event) {
     //  this.renderer.setStyle(
     //    this.element.nativeElement,
