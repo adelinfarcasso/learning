@@ -36,4 +36,6 @@ export class ServerComponent implements OnInit {
       queryParamsHandling: 'preserve',
     });
   }
+
+  onCall() {}
 }
