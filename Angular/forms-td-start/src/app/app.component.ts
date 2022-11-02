@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core'
-import { MaxLengthValidator, NgForm } from '@angular/forms'
+import { MaxLengthValidator, NgForm, NgModel } from '@angular/forms'
 
 @Component({
    selector: 'app-root',
@@ -12,6 +12,24 @@ export class AppComponent {
    answer: string
    genders = ['male', 'female']
    submitted = false
+
+   // Assignment
+   defaultSubscription: string = 'Advanced'
+   subscriptionsH = ['Basic', 'Advanced', 'Pro']
+   @ViewChild('formH') formH: NgForm
+
+   userH = {}
+
+   onSubmitH(form: NgForm, pass: NgModel) {
+      console.log(form, pass)
+
+      this.userH = {
+         email: this.formH.value.emailH,
+         subscription: this.formH.value.subscriptionsH,
+         password: this.formH.value.passwordH,
+      }
+      console.log(this.userH)
+   }
 
    user = {
       username: '',
